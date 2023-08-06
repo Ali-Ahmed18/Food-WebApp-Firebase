@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Edu+SA+Beginner&display=swap');
+.signupForm{
+    width: 95%;
+    max-width: 400px;
+    border: 2px solid #dadadada;
+    padding: 20px;
+    border-radius: 10px;
+    margin: .95rem 0;
+}
+*{
+    font-family: 'Dancing Script', cursive;
+}
+input{
+    font-family: 'Edu SA Beginner', cursive;
+}
+.main{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(253, 99, 24, 0.52), rgba(244, 147, 2, 0.73)),url("https://motionarray.imgix.net/preview-1626638-0qkYW4oOFw2PTUI9-small.jpg?w=660&q=60&fit=max&auto=format");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+nav{
+    font-size: 20px;
+}
+.page1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+    min-height: calc(100vh - 16.3%);
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    font-weight: bolder;
+}
+h4{
+    font-size: 28px;
+}
+.signupForm{
+    background-color: rgba(233, 133, 11, 0.61);
+    border: 2px dashed #fff;
+}
+.loginMessage{
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    background-color: #f5be07af;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: .5rem;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Edu SA Beginner', cursive;
+    transition: .3s ease;
+}
