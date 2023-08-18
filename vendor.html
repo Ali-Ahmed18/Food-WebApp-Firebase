@@ -6,40 +6,72 @@
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+      .main{
+        height: fit-content;
+      }
+    </style>
 </head>
   
 <body>
     <div class="main">
-      <nav class="navbar  bg-body-secondary ">
+      <nav style="background-color:  rgba(244, 111, 2, 0.637);" class="px-5 navbar navbar-expand-sm shadow">
         <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="./assets/food-app-logo.png" alt="Logo" width="100" height="67" class="d-inline-block align-text-top">
-            <h4>OniFood</h4>
-          </a>
+          <a class="navbar-brand d-flex align-items-center" href="./vendor.html"><img src="./assets/food-app-logo.png"  width="120" height="80" alt="LOGO"><h4 h4 class="text-light">OniFood</h4></a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-light" aria-current="page" href="#list">Foods</a>
+              </li>              
+              <li class="nav-item">
+                <a class="nav-link fw-bold text-light" id="logOut" aria-current="page" href="#">Logout</a>
+              </li>              
+            </ul>
+          </div>
         </div>
       </nav>
-      <h1 class="text-center">Vendor Page</h1>
+      
       <div class="signupForm mt-5">
+        <h1 class="text-center text-white">Vendor Page</h1>
         <form >
           <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="title" placeholder="Title">
+            <input type="text" class="form-control" id="title" placeholder="Title">
             <label for="floatingInput">Title</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="description" placeholder="Description">
+            <input type="text" class="form-control" id="description" placeholder="Description">
             <label for="floatingPassword">Description</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="price" placeholder="Price">
+            <input type="number" class="form-control" id="price" placeholder="Price">
             <label for="floatingPassword">Price</label>
           </div>
+          <div class="mb-3">
+            <label for="foodType" class="form-label text-light fs-6" class="fw-bold">Select Food Type</label>
+            <select id="foodType" class="form-select">
+              <option disabled selected >Choose option</option>
+              <option value="PIZZA" class="fw-bold">PIZZA</option>
+              <option value="BURGERS" class="fw-bold">BURGERS</option>
+              <option value="BAR.B.Q" class="fw-bold">BAR.B.Q</option>
+              <option value="ROLLS" class="fw-bold">ROLLS</option>
+            </select>
+            </div>
           <div class=" position-relative mb-4">
             <input type="file" class="form-control" id="productImg" >
             <label style="transform: translate(5px, -50%);background-color: #fff;" for="productImg" class="position-absolute top-50"> <b>+</b>Upload Img</label>
           </div>
-          <button type="submit" id="logIn" class="btn btn-primary w-75 m-auto d-block ">Login</button>
+          <button type="submit" style="background-color:  rgb(244, 111, 2);" id="logIn" class="btn w-75 m-auto d-block text-white">Add</button>
         </form>
       </div>
+      <section class="mt-5 container">
+              <h1 class="text-white" id="list">Foods List :</h1>
+                <div class="FoodListParent">
+                </div>
+      </section>
     </div>
 
     

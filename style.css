@@ -15,21 +15,22 @@ input{
     font-family: 'Edu SA Beginner', cursive;
 }
 .main{
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     background-image: linear-gradient(to bottom, rgba(253, 99, 24, 0.52), rgba(244, 147, 2, 0.73)),url("https://motionarray.imgix.net/preview-1626638-0qkYW4oOFw2PTUI9-small.jpg?w=660&q=60&fit=max&auto=format");
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
 }
 nav{
-    font-size: 20px;
+    font-size: 22px;
 }
 .page1{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;   
-    min-height: calc(100vh - 16.3%);
+    min-height: calc(100vh - 16.3vh);
 }
 h1{
     font-family: 'Dancing Script', cursive;
@@ -42,6 +43,7 @@ h4{
 .signupForm{
     background-color: rgba(233, 133, 11, 0.61);
     border: 2px dashed #fff;
+    margin: 0 auto;
 }
 .loginMessage{
     position: absolute;
@@ -55,4 +57,39 @@ h4{
     border-radius: 10px;
     font-family: 'Edu SA Beginner', cursive;
     transition: .3s ease;
+}
+.FoodListParent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 30px;
+    background-color: #ffffff2f;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 15px;
+}
+.card p,
+.card h4,
+.card a{
+    font-family: cursive ;
+}
+.customLink{
+    position: relative;
+}
+.active{
+    box-shadow: 0 3px #fff;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 991px){
+    .FoodListParent{
+    grid-template-columns: 1fr 1fr;
+
+    }
+}
+@media screen and (max-width: 600px){
+    .FoodListParent{
+    grid-template-columns: 1fr;
+
+    }
 }
